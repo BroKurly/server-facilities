@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_ROOT_PASSWORD=aVJ320v7caFjc8avCj3fcFFaocpVU32v8vcC891CzzfjcX2p36qRr
+      - MYSQL_DATABASE=curly_server
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db:/var/lib/mysql
